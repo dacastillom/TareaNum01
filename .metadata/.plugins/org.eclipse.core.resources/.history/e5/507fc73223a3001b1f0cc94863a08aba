@@ -1,0 +1,12 @@
+package com.actividad.servicio;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.actividad.entidad.Marca;
+
+public interface MarcaServicio extends JpaRepository<Marca, Integer> {
+
+	public abstract List<Marca> listaMarca();
+	
+}

@@ -1,0 +1,5 @@
+package com.actividad.controller;
+
+public class RegistraMedicamentoController {
+
+}

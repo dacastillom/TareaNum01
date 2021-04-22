@@ -1,0 +1,11 @@
+package com.actividad.servicio;
+
+import org.springframework.stereotype.Service;
+
+import com.actividad.repositorio.MarcaRepositorio;
+
+@Service
+public class MarcaServicioImpl implements MarcaServicio {
+	private MarcaRepositorio repositorio;
+
+}

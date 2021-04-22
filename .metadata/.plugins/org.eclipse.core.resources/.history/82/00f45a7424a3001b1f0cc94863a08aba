@@ -1,0 +1,13 @@
+package com.actividad.servicio;
+
+import com.actividad.entidad.Medicamento;
+
+public class MedicamentoServicioImpl implements MedicamentoServicio {
+
+	@Override
+	public Medicamento insertaMedicamento(Medicamento obj) {
+		return ;
+	}
+	
+
+}

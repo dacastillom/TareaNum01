@@ -1,0 +1,9 @@
+package com.actividad.servicio;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.actividad.entidad.Medicamento;
+
+public interface MedicamentoServicio extends JpaRepository<Medicamento, Integer> {
+
+}

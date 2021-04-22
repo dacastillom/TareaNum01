@@ -1,0 +1,22 @@
+package com.tarea.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.tarea.entity.Marca;
+import com.tarea.repository.MarcaRepository;
+import com.tarea.service.MarcaService;
+
+public class MarcaServiceImpl implements MarcaService{
+
+	@Autowired
+	private MarcaRepository repository;
+	
+	@Override
+	public List<Marca> listaMarca() {
+		return repository.findAll();
+	}
+
+	
+}

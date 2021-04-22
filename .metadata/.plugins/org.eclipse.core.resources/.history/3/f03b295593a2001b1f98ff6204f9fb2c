@@ -1,0 +1,5 @@
+package com.tarea.repository;
+
+public interface MedicamentoRepository {
+
+}

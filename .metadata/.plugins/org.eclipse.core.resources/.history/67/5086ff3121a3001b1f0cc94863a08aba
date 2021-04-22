@@ -1,0 +1,5 @@
+package com.actividad.repositorio;
+
+public interface MarcaRepositorio {
+
+}

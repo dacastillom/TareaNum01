@@ -1,0 +1,23 @@
+package com.actividad.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.actividad.entidad.Marca;
+import com.actividad.servicio.MarcaServicio;
+import com.actividad.servicio.MedicamentoServicio;
+
+public class RegistraMedicamentoController {
+	
+	@Autowired
+	private MarcaServicio marcaServicio;
+	
+	@Autowired
+	private MedicamentoServicio medicamentoServicio;
+	
+	
+	public List<Marca> lis
+	
+
+}

@@ -1,0 +1,29 @@
+package com.actividad.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.actividad.entidad.Marca;
+import com.actividad.servicio.MarcaServicio;
+import com.actividad.servicio.MedicamentoServicio;
+
+public class RegistraMedicamentoController {
+	
+	@Autowired
+	private MarcaServicio marcaServicio;
+	
+	@Autowired
+	private MedicamentoServicio medicamentoServicio;
+	
+	
+	@ResponseBody
+	@RequestMapping(name = "/listaMarca")
+	public List<Marca> listaMarca(){
+		return marcaServicio.listaMarca();
+	}
+	
+
+}
