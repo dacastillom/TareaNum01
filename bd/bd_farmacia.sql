@@ -55,12 +55,15 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
+
+ SHOW VARIABLES LIKE 'auto_inc%';
+ 
 SET @@auto_increment_increment=10;/*https://dev.mysql.com/doc/refman/8.0/en/replication-options-source.html#sysvar_auto_increment_increment*/  /*el incremento es en base al número que coloque*/
 SET @@auto_increment_offset=10;
 
 
 
-/*REGISTROS INICIALES PARA LA BD*/
+/*REGISTROS INICIALES PARA LA BD*/
 INSERT INTO `tb_marca` VALUES (100,'Marca_01'),(200,'Marca_02'),(300,'Marca_03'),(400,'Marca_04');
 
 INSERT INTO `tb_medicamento`(des_med,pre_med,can_med,fecha_elab,cod_marca) VALUES ('Altalgina',2.5,500,'2015-10-10',100),('Antobiotico',2.5,500,'2020-05-10',200),('Vics',1.7,50,'2021-01-11',300);

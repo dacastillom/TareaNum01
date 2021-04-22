@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/bootstrapValidator.css"/>
-<title>Tarea Virtual N°01 - David Castillo Monzón </title>
+<title>Tarea Virtual N°01 - Mejorado - David Castillo Monzón </title>
 </head>
 <body>
 
@@ -26,38 +26,38 @@
 	</c:if>
 	<c:remove var="MENSAJE" />
 	
-	<form action="insertaMedicamento" id="id_form" method="post"> <!-- No ovlidar el action que sería un URL -->
+	<form action="registraMedicamento" id="id_form" method="post"> <!-- No ovlidar el action que sería un URL -->
 			
-			<div class="form-group">
+			<!-- <div class="form-group">
 				<label class="control-label" for="id_codigo">Código</label>
-				<input class="form-control" type="text" id="id_codigo" name="codigo" placeholder="Ingrese el Codigo" maxlength="5">    
-			</div>
+				<input class="form-control" type="text" id="id_codigo" name="cod_med" placeholder="Ingrese el Codigo" maxlength="5">    
+			</div> -->
 			
 			<div class="form-group">
 				<label class="control-label" for="id_descripcion">Descripción</label>
-				<input class="form-control" type="text" id="id_descripcion" name="descripcion" placeholder="Ingrese descripción" maxlength="50" pattern="">    <!-- name = nombre de atributo -->
+				<input class="form-control" type="text" id="id_descripcion" name="des_med" placeholder="Ingrese descripción" maxlength="50" pattern="">    <!-- name = nombre de atributo -->
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label" for="id_precio">Precio</label>
-				<input class="form-control" type="text" pattern="^\d{0,9}(\.\d{2})$" id="id_precio" name="precio" placeholder="Ingrese el precio" maxlength="7">    
+				<input class="form-control" type="text" pattern="^\d{0,9}(\.\d{2})$" id="id_precio" name="pre_med" placeholder="Ingrese el precio" maxlength="7">    
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label" for="id_cantidad">Cantidad</label>
-				<input class="form-control" type="text" id="id_cantidad" name="cantidad" placeholder="Ingrese cantidad" maxlength="2">    
+				<input class="form-control" type="text" id="id_cantidad" name="can_med" placeholder="Ingrese cantidad" maxlength="2">    
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label" for="id_fecha">Fecha de Elaboración</label>
-				<input class="form-control" type="text" id="id_fecha" name="fecha" placeholder="Ingrese la fecha YYYY-MM-DD" maxlength="100">    
+				<input class="form-control" type="text" id="id_fecha" name="fecha_elab" placeholder="Ingrese la fecha YYYY-MM-DD" maxlength="100">    
 			</div>
 		
 		
 			
 			<div class="form-group">
 				<label class="control-label" for="id_marca">Marca</label>
-				<select id="id_marca" name="marca.codigo" class="form-control">
+				<select id="id_marca" name="marca.cod_marca" class="form-control">
 					<option value=" ">[Seleccione]</option>
 				</select>
 				
@@ -76,7 +76,7 @@
 $.getJSON("listaMarca", {}, function(data){
 	console.log("este es un mensaje para validar XD",data)
 	$.each(data, function(index,item){
-		$("#id_marca").append("<option value="+ item.codigo + ">"+ item.nombre +"</option>");
+		$("#id_marca").append("<option value="+ item.cod_marca + ">"+ item.nom_marca +"</option>");
 	});
 });
 
@@ -151,7 +151,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-        		codigo:{
+        	/*cod_med:{
                     selector: "#id_codigo",
                     validators:{
                         notEmpty: {
@@ -163,8 +163,8 @@ $(document).ready(function() {
                             message: 'El código es de 5 caracteres'
                         },
                     }
-                },
-                descripcion:{
+                },*/
+                des_med:{
                     selector: "#id_descripcion",
                     validators:{
                         notEmpty: {
@@ -177,7 +177,7 @@ $(document).ready(function() {
                         },
                     }
                 },
-                precio:{
+                pre_med:{
                     selector: "#id_precio",
                     validators:{
                         notEmpty: {
@@ -189,7 +189,7 @@ $(document).ready(function() {
                         }
                     }
                 },
-                cantidad:{
+                can_med:{
                     selector: "#id_cantidad",
                     validators:{
                         notEmpty: {
@@ -202,7 +202,7 @@ $(document).ready(function() {
                         },
                     }
                 },
-                fecha:{
+                fecha_elab:{
                     selector: "#id_fecha",
                     validators:{
                     	notEmpty: {
@@ -214,7 +214,7 @@ $(document).ready(function() {
                        }
                    }
                },
-               precio:{
+               /*precio:{
                    selector: "#id_precio",
                    validators:{
                        notEmpty: {
@@ -225,7 +225,7 @@ $(document).ready(function() {
                            message: 'El precio debe contener 2 decimales'
                        }
                    }
-               },
+               },*/
                marca:{
                    selector: "#id_marca",
                    validators:{

@@ -11,7 +11,7 @@
 
 <link rel="stylesheet" href="css/bootstrap.css"/>
 <link rel="stylesheet" href="css/bootstrapValidator.css"/>
-<title>Tarea Virtual N°01 - David Castillo Monzón </title>
+<title>Tarea Virtual N°01 Antiguo - Mejorando - David Castillo Monzón </title>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_precio">Precio</label>
-				<input class="form-control" type="text" pattern="^\d{0,9}(\.\d{2})$" id="id_precio" name="pre_med" placeholder="Ingrese el precio" maxlength="7">    
+				<input class="form-control" type="text" pattern="^\d{0,9}(\.\d{2})$" id="id_precio" name="pre_med" placeholder="Ingrese el precio" maxlength="12">    
 			</div>
 			
 			<div class="form-group">
@@ -57,7 +57,7 @@
 			
 			<div class="form-group">
 				<label class="control-label" for="id_marca">Marca</label>
-				<select id="id_marca" name="marca.cod_med" class="form-control">
+				<select id="id_marca" name="marca.cod_marca" class="form-control">
 					<option value=" ">[Seleccione]</option>
 				</select>
 				
@@ -127,7 +127,7 @@ $("#id_registrar").click(function () {
 
 //Se limpia los campos
 function clear(){
-	$("#id_codigo").val('');
+	//$("#id_codigo").val('');
 	$("#id_descripcion").val('');
 	$("#id_precio").val('');
 	$("#id_cantidad").val('');
@@ -149,7 +149,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-        		codigo:{
+        		/*codigo:{
                     selector: "#id_codigo",
                     validators:{
                         notEmpty: {
@@ -161,8 +161,8 @@ $(document).ready(function() {
                             message: 'El código es de 5 caracteres'
                         },
                     }
-                },
-                descripcion:{
+                },*/
+                des_med:{
                     selector: "#id_descripcion",
                     validators:{
                         notEmpty: {
@@ -175,7 +175,7 @@ $(document).ready(function() {
                         },
                     }
                 },
-                precio:{
+                pre_med:{
                     selector: "#id_precio",
                     validators:{
                         notEmpty: {
@@ -187,7 +187,7 @@ $(document).ready(function() {
                         }
                     }
                 },
-                cantidad:{
+                can_med:{
                     selector: "#id_cantidad",
                     validators:{
                         notEmpty: {
@@ -200,7 +200,7 @@ $(document).ready(function() {
                         },
                     }
                 },
-                fecha:{
+                fecha_elab:{
                     selector: "#id_fecha",
                     validators:{
                     	notEmpty: {
@@ -212,7 +212,7 @@ $(document).ready(function() {
                        }
                    }
                },
-               precio:{
+               /*precio:{
                    selector: "#id_precio",
                    validators:{
                        notEmpty: {
@@ -223,7 +223,7 @@ $(document).ready(function() {
                            message: 'El precio debe contener 2 decimales'
                        }
                    }
-               },
+               },*/
                marca:{
                    selector: "#id_marca",
                    validators:{
